@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>CS 490WD Project 1 - Sang Ly</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="Movie_Style/CS_490WD_Project_1_Sang_Ly_CSS.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <script  src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script  src="script/CS_490WD_Project_1_Sang_Ly_JS.js" ></script>
+        <script  src="script/htmlMaker.js"></script>
+        <script id="movies_JSON" src="Project_1_Data/data/movies.js"></script>
+        
+        <!-- Create Photo Template !-->
+        <script id="photo-template" type="text/html">
+            <!-- Photo Container hold photo, title, year, starring, description, rating  !-->
+            <div class="photo_container">
+                <div class='photo'>
+                    <img src='{{photo}}'>
+                    <div class='title'>
+                        {{title}}
+                        <spam class="new_line">({{year}})</spam>
+                    </div>
+                    <div class="title_shift">
+                        {{title}}
+                        <spam class="new_line">({{year}})</spam>
+                    </div>
+                    <div class="starring">
+                        Starring:
+                        <spam class="starring_shift"></spam>    
+                        {{starring}}
+                    </div>
+                    <div class="description">
+                        {{description}}
+                    </div>
+                    
+                    <div id='HD_none' class='HD'>
+                       {{HD}}
+                    </div>
+                    <div class="rating">
+                        Rating: 
+                        {{rating}}               
+                        <div id="star1" class="fa fa-star"> </div>
+                        <div id="star2" class="fa fa-star"> </div>
+                        <div id="star3" class="fa fa-star"> </div>
+                        <div id="star4" class="fa fa-star"> </div>
+                        <div id="star5" class="fa fa-star"> </div>
+                    </div>
+                </div>
+            </div>
+        </script>
+    </head>
+    <body>
+        <!-- Create Head Container to hold logo, title, search box, and search button!-->
+        <div class="header_container">
+            <!-- Display movie.png!-->
+            <div class="movie_png">
+                <img src="Project_1_Images/images/movie.png">
+            </div>
+            <!-- Display Text "RENT A MOVIE" !-->
+            <div class="Rent_A_Movie">
+                <h3>RENT A MOVIE </h3>
+            </div>
+            <!-- Display movie search box, button, and suggestion!-->
+            <input class="Movie_Search_Text" id="field" type="text">
+            <button class="Movie_Search_Button" id="search_button">Search</button>
+            <div class="Movie_Search_Suggestions" id="Suggestions_Box"></div>
+        </div>
+        
+        <!-- Display Option Container to hold, text "Sort By", combo box, and list/grid icon!-->
+        <div class="options_container">
+            <!-- Display text "Sort By"!-->
+            <spam class="sort_by"> Sort By: </spam>
+            <!-- Display Combo Box with option Year and Rating!-->
+            <select class="combo_box" id="combo_box">
+                <option>Year</option>
+                <option>Rating</option>
+            </select>
+            <!-- Display List and Grid icon!-->
+            <div class="icons">
+                <img id="list_icon" title="list" src="Project_1_Images/images/list.jpg">
+                <img id="grid_icon" title="grid" src="Project_1_Images/images/grid_pressed.jpg">
+            </div>
+        </div>
+        
+        <!-- Place holder for movies images JSON to place in !-->
+        <div id="container" class="grid_container">
+            <div id="photos" class="grid">
+            </div>
+        </div>
+    </body>
+</html>

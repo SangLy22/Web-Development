@@ -1,0 +1,303 @@
+.header_container{
+    position: relative;
+    width: 1200px;
+    height: 60px;
+    background-color: lightgray;
+}
+
+.header_container .movie_png{
+    position: relative;
+    float: left;
+}
+
+.header_container .movie_png img{
+    height: 60px;
+    width: 60px;
+}
+
+@font-face {
+    font-family: Oleo;
+    src: url(Fonts/Oleo.woff);
+}
+
+.header_container .h3{
+    font-family: Oleo;
+}
+
+.header_container .Rent_A_Movie{
+    position: relative;
+    margin: 0px 5px 0px 5px;
+    float: left;
+}
+.header_container input.Movie_Search_Text{
+    position: relative;
+    margin-left: 5px;
+    top: 20px;
+    float: left; 
+    width: 410px;
+}
+.header_container button.Movie_Search_Button{
+    position: relative;
+    top: 20px;
+    float: left; 
+}
+
+.header_container .Movie_Search_Suggestions{
+    position: absolute;
+    top: 42px;
+    left: 215px;
+    z-index: 50;
+    border: solid 1px lightgray;
+    background-color: white;
+    width: 470px;
+    overflow: auto;
+    display: none;
+}
+.header_container .Movie_Search_Sub_Suggestions{
+    width: 460px;
+    padding: 5px;
+}
+
+.header_container .Movie_Search_Sub_Suggestions:hover{
+    background-color: rgb(245,245,245);
+    cursor: pointer;
+}
+
+.options_container{
+    position: relative;
+    height: 40px;
+    width: 1200px;
+    border: solid 0.1px lightgrey;
+}
+
+.options_container select.combo_box, .options_container spam.sort_by{
+    position: relative;
+    top: 10px;
+    margin-left: 10px;
+}
+
+.options_container .icons{
+    position: relative;
+    float: right;
+    margin: 5px;
+}
+
+.options_container .icons img{
+    position: relative;
+    float: right;
+}
+
+.options_container .icons:hover{
+    cursor: pointer;
+}
+
+.options_container .grid{
+    position: relative;
+}
+
+.grid_container{
+    position: relative;
+    height: 500px;
+    width: 1200px;
+}
+
+.list_container{
+    position: absolute;
+    width: 900px;
+    height: 400%;
+    top: 125px;
+    left: 15px;
+    padding: 5px;
+}
+
+.grid .photo_container{
+    position:relative;
+    float:left;
+    width: 200px;
+    height: 200px;
+    margin: 30px 0px 0px 30px;
+}
+
+.grid .photo_container .photo{
+    position:relative;
+    float:left;
+    width: 200px;
+    height: 200px;
+}
+
+.grid .photo_container .photo img , .list .photo img{
+    position:absolute;
+    background-color: white;
+    padding: 5px;
+    border:1px solid lightgray;
+    width: 200px;
+    height: 200px;
+}
+
+ .grid .title {
+    position:absolute;
+    left:6px;
+    bottom: -6px;
+    height:40px;
+    width:200px;
+    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+    color: white;
+}
+
+.grid .grid_container:hover{
+    display: none;
+    visibility: hidden;
+    opacity: 1;
+}
+
+.grid spam.new_line{
+    position: absolute;
+    text-align: center;
+    top: 20px;
+    left: 80px
+}
+
+.grid .photo_container .HD{
+    position: absolute;
+    top: 15px;
+    left:15px;
+    height: 30px;
+    width: 40px;
+}
+
+.grid .photo_container .HD img{
+    position: absolute;
+    height: 30px;
+    width: 40px;
+    padding: 0px;
+    border-radius: 6px;
+}
+
+.list .HD{
+    position: absolute;
+    top: 15px;
+    left:15px;
+    height: 30px;
+    width: 40px;
+}
+
+.list .HD img{
+    position: absolute;
+    height: 30px;
+    width: 40px;
+    padding: 0px;
+    border-radius: 6px;
+    top: 15px;
+    left:15px;
+}
+
+.list {
+    position:relative;
+}
+
+.list .photo{
+    position:relative;
+    display:block;
+    width:200px;
+    height:200px;
+    padding:10px;
+    border-bottom:lightgray 1px dotted;
+}
+
+.list .title{
+    position:relative;
+    color: black;
+    left:250px;
+    font-size:25px;
+    width: 550px;
+    font-weight: bold;
+}
+
+.list .new_line{
+    opacity: 0.5;
+}
+
+.list .title_shift{
+    display: none;
+}
+
+.list .starring{
+    position: absolute;
+    width: 550px;
+    height: 20px;
+    left: 260px;
+    top: 50px
+}
+
+.list spam.starring_shift{
+    break-after: auto;
+}
+
+.list .rating{
+    position: absolute;
+    width: 550px;
+    height: 20px;
+    left: 260px;
+    top: 80px
+}
+
+.list .description{
+    position: absolute;
+    width: 550px;
+    height: 90px;
+    left: 260px;
+    top: 110px;
+    background-color: lightblue;
+}
+
+.grid .description{
+    display: none;
+}
+
+.grid spam.starring_shift{
+    display: block;
+}
+
+.grid .photo_container .photo:hover .title{
+    visibility: hidden;
+}
+
+.grid .photo_container .photo .title_shift{
+
+    visibility: hidden;
+    padding: 5px;
+    position:absolute;
+    left:6px;
+    bottom: -6px;
+    height:120px;
+    width:190px;
+    background-color: rgba(0,0,0,0.6);
+    text-align: center;
+    color: white;    
+}
+
+.grid .photo_container .photo .starring{
+    padding: 5px 5px 0px 5px;
+    visibility: hidden;
+     position:absolute;
+    left:6px;
+    bottom: -6px;
+    height:40px;
+    width:190px;
+    background-color: rgba(0,0,0,0.7);
+    text-align: left;
+    color: white; 
+}
+
+.grid .photo_container .photo:hover .title_shift, .grid .photo_container .photo:hover .starring{
+    visibility: visible;
+}
+
+.list .fa-star{
+    color: lightgray;  
+}
+
+.list .checked {
+    color: orange;
+}
